@@ -3,10 +3,10 @@ const { sendErrorResponse } = require("../helpers/send_error_response");
 
 const addBranch = async (req, res) => {
   try {
-    const { name, address, call_number } = req.body;
+    const { name, address, phone_number } = req.body;
     const newBranch = await pool.query(
-      `INSERT INTO branch (name, address, call_number) VALUES ($1, $2, $3) RETURNING *`,
-      [name, address, call_number]
+      `INSERT INTO branch (name, address, phone_number) VALUES ($1, $2, $3) RETURNING *`,
+      [name, address, phone_number]
     );
     res.status(201).send(newBranch.rows[0]);
   } catch (error) {

@@ -19,6 +19,7 @@ const addStage = async (req, res) => {
 
 const getAllStages = async (req, res) => {
   try {
+
     const stages = await pool.query(`SELECT * FROM stage`);
     res.status(200).send(stages.rows);
   } catch (error) {
