@@ -4,5 +4,8 @@
   "db_username": "postgres",
   "db_port": 5432,
   "db_password": "5432",
-  "db_name": "crm"
+  "db_name": "crm",
+
+  "iv": "aaaa1111",
+  "crypt_password": "JudaKuchliMaxfiyPassword"
 }

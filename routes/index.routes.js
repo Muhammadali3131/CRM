@@ -13,6 +13,10 @@ const paymentRouter = require("./payment.route");
 const lessonRouter = require("./lesson.route");
 const student_lessonRouter = require("./student_lesson.route");
 const student_groupRouter = require("./student_group.route");
+const otpRouter = require("./otp.route");
+const stuffRouter = require("./stuff.route");
+const group_stuffRouter = require("./group_stuff.route");
+const stuff_roleRouter = require("./stuff_role.route");
 
 router.use("/stage", stageRouter);
 router.use("/branch", branchRouter);
@@ -27,5 +31,9 @@ router.use("/payment", paymentRouter);
 router.use("/lesson", lessonRouter);
 router.use("/stulesson", student_lessonRouter);
 router.use("/stugroup", student_groupRouter);
+router.use("/otp", otpRouter);
+router.use("/stuff", stuffRouter);
+router.use("/group_stuff", group_stuffRouter);
+router.use("/stuff_role", stuff_roleRouter);
 
 module.exports = router;
